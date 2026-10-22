@@ -1,44 +1,66 @@
-
-*{
+* {
   margin: 0;
   box-sizing: border-box;
 }
 
-
-body
-{
-  background: linear-gradient(45deg , rgba(27, 27, 27, 0.813),rgba(30, 30, 30, 0.977) ) , url('landingbg1.jpg');
+body {
+  background: linear-gradient(45deg, rgba(27, 27, 27, 0.813), rgba(30, 30, 30, 0.977)), url('landingbg1.jpg');
   color: aliceblue;
   text-align: center;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.main
-{
-  padding: 30px;
+.main {
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
 }
 
-.main > h1
-{
-  font-size: 200px;
+.main > h1 {
+  font-size: clamp(3rem, 10vw, 12rem);
+  line-height: 1.1;
+  word-break: break-word;
 }
 
-.main > p
-{
-  font-size: 30px;
+.main > p {
+  font-size: 23px;
+  margin-top: 15px;
 }
 
-
-.btn
-{
-  min-width:100px;
+.btn {
+  min-width: 120px;
   height: 45px;
+  padding: 0 20px;
   background: rgb(174, 128, 43);
   color: whitesmoke;
   border: none;
   outline: none;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1rem;
   margin: 30px;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: rgb(194, 143, 49);
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+  
+  .main {
+    padding: 15px;
+  }
 }

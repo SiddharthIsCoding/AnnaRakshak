@@ -1,4 +1,6 @@
-import Login from "./Login";
+import react from "react";
+import './App.css';
+import LoginPage from "./Login";
 
 function App() {
   return (
